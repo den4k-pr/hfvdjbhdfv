@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-45MM60BWMP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-45MM60BWMP');
+</script>
+<script>
+  gtag('event', 'purchase', {
+    transaction_id: 'T0003',   
+    value: 9.00,
+    currency: 'EUR',
+    items: [
+      {
+        item_id: 'FullSplit_OTO',   
+        item_name: 'FullSplit_OTO', 
+        price: 9.00,
+        quantity: 1
+      }
+    ]
+  });
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANK YOU</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<style>
+    @font-face {
+        font-family: 'Outfit-Regular';
+        src: url('./fonts/Outfit-Regular.ttf?v=2') format('truetype');
+        font-style: normal;
+        font-weight: 100 900;
+    }
+    @font-face {
+        font-family: 'Outfit-Bold';
+        src: url('./fonts/Outfit-SemiBold.ttf?v=3') format('truetype');
+        font-style: normal;
+        font-weight: 100 900;
+    }
+    @font-face {
+        font-family: 'Antonio-Regular';
+        src: url('./fonts/Antonio-Regular.ttf?v=2') format('truetype');
+        font-style: normal;
+        font-weight: 100 900;
+    }
+    @font-face {
+        font-family: 'General-Sans';
+        src: url('./fonts/GeneralSans-Variable.ttf?v=3') format('truetype');
+        font-style: normal;
+        font-weight: 100 900;
+    }
+    p {
+        font-family: 'Outfit-Regular' !important;
+    }
+    
+    .header h1{
+        font-family: 'Antonio-Regular' !important;
+        font-size: 33px;
+    }
+    
+    .subtitle{
+        font-family: 'Outfit-Regular' !important;
+        font-size: 17px;
+        font-weight: 300;
+    }
+    
+    .wait-badge{
+        padding-top: 10px;
+        font-family: 'Antonio-Regular' !important;
+    }
+    
+    .timer-bar{
+        color: #FF4400;
+        background: #fff;
+        font-family: 'Outfit-Regular' !important;
+        height: 40px;
+        font-size: 16px;
+        gap: 10px;
+    }
+    app-container {
+            width: 100%;
+            max-width: 450px; /* Задана ширина екрану */
+            background-color: #000;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-section {
+            position: relative;
+            /* Зображення фоном. При необхідності поправте позиціонування */
+            background: url('./images/hero.webp?v=2') top center / cover no-repeat;
+            padding: 40px 20px 30px;
+            min-height: 500px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* Додамо легкий градієнт для читабельності тексту, якщо картинка занадто світла зліва */
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .main-title {
+            font-weight: 700;
+            font-size: 37.55px; /* Заданий розмір */
+            line-height: 1.1;
+            margin: 0 0 5px 0;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: left;
+        }
+        
+        .footer{
+            position: fixed;
+            bottom: 0;
+            transform: translateY(100%);
+            transition: all .3s;
+            top: initial;
+            width: 450px;
+            z-index: 100;
+        }
+        
+        .footer.active{
+            transform: translateY(0%);
+        }
+
+        .sub-title {
+            font-weight: 400;
+            font-size: 17px; /* Заданий розмір */
+            letter-spacing: 2px;
+            margin: 0 0 20px 0;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        .price-badge {
+            font-weight: 400;
+            font-size: 24px;
+            background: linear-gradient(90deg, #FF000E, #BE000A);
+            border-radius: 72.12px;
+            padding: 8px 12px;
+            display: flex;
+            margin-bottom: 30px;
+            margin-right: auto;
+            justify-content: left;
+            font-family: 'Outfit-Regular' !important;
+            width: 170px;
+        }
+
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px 0;
+        }
+
+        .features-list li {
+            font-weight: 400;
+            font-size: 16px; /* Заданий розмір */
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            font-family: 'Outfit-Regular' !important;
+            text-align: left;
+            gap: 12px;
+            line-height: 1.3;
+        }
+
+        .features-list img {
+            width: 24px;
+            object-fit: contain;
+        }
+
+        /* Timer Styles */
+        .timer-label {
+            font-weight: 400;
+            font-size: 20px;
+            text-transform: uppercase;
+            font-family: 'Outfit-Regular' !important;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-align: left;
+            color: #fff;
+        }
+
+        .timer-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 400;
+        }
+
+        .time-box {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            width: 45px;
+            height: 45px;
+            min-width: 48px;
+            text-align: center;
+            backdrop-filter: blur(4px);
+            font-family: 'Outfit-Bold' !important;
+            color: #ffffff8c;
+        }
+
+        .time-box.active-red {
+            color: #FF0000
+        }
+
+        .timer-colon {
+            color: #ffffff8c;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+
+        /* --- REVIEWS SECTION --- */
+        .reviews-section {
+            background: #110808; /* Темно-бордовий/чорний фон */
+            padding: 40px 20px;
+            color: #fff;
+        }
+
+        .reviews-title {
+            font-weight: 700;
+            font-size: 32px;
+            margin: 0 0 20px 0;
+            font-family: 'Outfit-Bold' !important;
+            text-align: left;
+        }
+
+        .swiper {
+            width: 100%;
+            padding-bottom: 40px; /* Місце для точок пагінації */
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            border-radius: 20px;
+            display: block;
+        }
+        
+        .swiper-pagination{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+        }
+
+        /* Кастомізація пагінації Swiper */
+        .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 1;
+            width: 9px;
+            height: 9px;
+            margin: 0 5px !important;
+        }
+        .swiper-pagination-bullet-active {
+            background: #F25B24;
+            width: 12px;
+            height: 12px;
+        }
+
+
+        /* --- FOOTER SECTION --- */
+        .footer-section {
+            background: #000;
+            padding: 40px 20px 50px 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .footer-title {
+            font-weight: 700;
+            font-size: 36px;
+            margin: 0 0 10px 0;
+            text-transform: uppercase;
+            font-family: 'League Gothic' !important;
+        }
+
+        .footer-subtitle {
+            font-weight: 400;
+            font-size: 17px;
+            color: #ccc;
+            font-family: 'Outfit-Regular' !important;
+            margin: 0 0 30px 0;
+        }
+        
+        .add-btn{
+            font-size: 30px;
+            font-family: 'Outfit-Bold' !important;
+            background-image: url(./images/button-2.png?v=2) !important;
+        }
+        
+        .support-link{
+            font-family: 'Outfit-Regular' !important;
+        }
+
+        .insta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: transparent;
+            border: 1px solid #F25B24;
+            border-radius: 12px;
+            padding: 15px 30px;
+            color: #F25B24;
+            font-family: 'Outfit-Bold' !important;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            width: 80%;
+            transition: all 0.3s ease;
+        }
+        
+        .insta-btn img{
+            width: 16px;
+            height: 16px;
+        }
+
+        .insta-btn:hover {
+            background: rgba(255, 90, 0, 0.1);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-top: 30px;
+            color: #666;
+            font-family: 'Outfit-Regular' !important;
+        }
+        
+        @media (max-width: 450px){
+
+    .header h1{
+        font-size: 7.33vw;
+    }
+
+    .subtitle{
+        font-size: 3.78vw;
+    }
+
+    .wait-badge{
+        padding-top: 2.22vw;
+    }
+
+    .timer-bar{
+        height: 8.89vw;
+        gap: 2.22vw;
+    }
+
+    .hero-section{
+        padding: 8.89vw 4.44vw 6.67vw;
+        min-height: 111.11vw;
+    }
+
+    .main-title{
+        font-size: 8.34vw;
+        margin: 0 0 1.11vw 0;
+    }
+
+    .footer{
+        width: 100vw;
+    }
+
+    .sub-title{
+        font-size: 3.78vw;
+        letter-spacing: 0.44vw;
+        margin: 0 0 4.44vw 0;
+    }
+
+    .price-badge{
+        font-size: 5.33vw;
+        border-radius: 16.03vw;
+        padding: 1.78vw 2.67vw;
+        margin-bottom: 6.67vw;
+        width: 37.78vw;
+    }
+
+    .features-list{
+        margin: 0 0 8.89vw 0;
+    }
+
+    .features-list li{
+        font-size: 3.56vw;
+        margin-bottom: 5.56vw;
+        gap: 2.67vw;
+    }
+
+    .features-list img{
+        width: 5.33vw;
+    }
+
+    .timer-label{
+        font-size: 4.44vw;
+        margin-bottom: 2.22vw;
+        letter-spacing: 0.22vw;
+    }
+
+    .timer-wrapper{
+        gap: 1.78vw;
+    }
+
+    .time-box{
+        border-radius: 3.11vw;
+        font-size: 4.89vw;
+        width: 10vw;
+        height: 10vw;
+        min-width: 10.67vw;
+    }
+
+    .timer-colon{
+        font-size: 5.33vw;
+        margin-bottom: 1.11vw;
+    }
+
+    .reviews-section{
+        padding: 8.89vw 4.44vw;
+    }
+
+    .reviews-title{
+        font-size: 7.11vw;
+        margin: 0 0 4.44vw 0;
+    }
+
+    .swiper{
+        padding-bottom: 8.89vw;
+    }
+
+    .swiper-slide img{
+        border-radius: 4.44vw;
+    }
+
+    .swiper-pagination-bullet{
+        width: 2vw;
+        height: 2vw;
+        margin: 0 1.11vw !important;
+    }
+
+    .swiper-pagination-bullet-active{
+        width: 2.67vw;
+        height: 2.67vw;
+    }
+
+    .footer-section{
+        padding: 8.89vw 4.44vw 10.56vw 4.44vw;
+    }
+
+    .footer-title{
+        font-size: 8vw;
+        margin: 0 0 2.22vw 0;
+    }
+
+    .footer-subtitle{
+        font-size: 3.78vw;
+        margin: 0 0 6.67vw 0;
+    }
+
+    .add-btn{
+        font-size: 6.67vw;
+    }
+
+    .insta-btn{
+        gap: 2.22vw;
+        border-radius: 2.67vw;
+        padding: 3.33vw 6.67vw;
+        font-size: 3.11vw;
+        letter-spacing: 0.22vw;
+    }
+
+    .insta-btn img{
+        width: 3.56vw;
+        height: 3.56vw;
+    }
+
+    .footer-bottom{
+        font-size: 3.11vw;
+    }
+}
+</style>
+
+  </head>
+<body>
+
+<div class="upsell-container">
+    <header class="header">
+        <h1>THANK YOU FOR YOUR PURCHASE!</h1>
+        <p class="subtitle">Access to Your Program was sent to your email</p>
+        
+        <div class="wait-badge">
+            <img src="./images/star.png?v=2" class="star" alt="">
+            <span class="wait-text">BUT WAIT!</span>
+            <img src="./images/stars.png?v=2" class="stars" alt="">
+        </div>
+        <p class="deal-text">You've unlocked a limited deal to <br> strengthen up your results.</p>
+    </header>
+
+    <div class="timer-bar">
+        <img class="timer-bar-img" src="./images/time-2.png?v=2" alt=""> ONE-TIME AFTER PURCHASE OFFER
+    </div>
+
+    <div class="app-container">
+    
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="main-title">BEGINNER MOBILITY</h1>
+            <h2 class="sub-title">COURSE</h2>
+            
+            <div class="price-badge">
+                JUST FOR €9
+            </div>
+
+            <ul class="features-list">
+                <li>
+                    <img src="./images/check-2.png?v=2" />
+                    30 beginner-friendly <br> lessons
+                </li>
+                <li>
+                    <img src="./images/check-2.png?v=2" />
+                    10-15 min routines
+                </li>
+                <li>
+                    <img src="./images/check-2.png?v=2" />
+                    Perfect for stiff hips & <br> legs
+                </li>
+                <li>
+                    <img src="./images/check-2.png?v=2" />
+                    Do it at home anytime
+                </li>
+            </ul>
+
+            <div class="timer-section">
+                <div class="timer-label">OFFER ENDS IN:</div>
+                <div class="timer-wrapper">
+                    <div class="time-box" id="hours">00</div>
+                    <div class="timer-colon">:</div>
+                    <div class="time-box active-red" id="minutes">30</div>
+                    <div class="timer-colon">:</div>
+                    <div class="time-box active-red" id="seconds">00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews-section">
+        <h2 class="reviews-title">REVIEWS</h2>
+        
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="./images/slide6.webp?v=2" alt="Review 6"></div>
+                <div class="swiper-slide"><img src="./images/slide1.webp?v=2" alt="Review 1"></div>
+                <div class="swiper-slide"><img src="./images/slide2.webp?v=2" alt="Review 2"></div>
+                <div class="swiper-slide"><img src="./images/slide3.webp?v=2" alt="Review 3"></div>
+                <div class="swiper-slide"><img src="./images/slide4.webp?v=2" alt="Review 4"></div>
+                <div class="swiper-slide"><img src="./images/slide5.webp?v=2" alt="Review 5"></div>
+                <div class="swiper-slide"><img src="./images/slide7.webp?v=2" alt="Review 7"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <footer class="footer-section">
+        <h2 class="footer-title">ANY QUESTIONS OR NO MAIL?</h2>
+        <p class="footer-subtitle">We always ready to help!</p>
+        
+        <a href="#" class="insta-btn">
+            <img src="./images/insta.png?v=2" />
+            WRITE TO US ON INSTAGRAM
+        </a>
+
+        <div class="footer-bottom">
+            <span>ZBL COMPANY</span>
+            <span>BE 1022336448</span>
+        </div>
+    </footer>
+
+</div>
+
+
+</div>
+ <script defer>
+            document.addEventListener('DOMContentLoaded', () => {
+                const footer = document.getElementById('footer-bg'); // елемент, до якого додамо клас
+                if (!footer) return;
+
+                window.addEventListener('scroll', () => {
+                    // Перевіряємо, скільки проскролено
+                    if (window.scrollY >= 200) {
+                        footer.classList.add('active');
+                    } else {
+                        footer.classList.remove('active');
+                    }
+                });
+            });
+        </script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    // --- ІНІЦІАЛІЗАЦІЯ СЛАЙДЕРА SWIPER ---
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        }
+    });
+
+    // --- ЛОГІКА ТАЙМЕРА (30 хвилин з кешуванням) ---
+    const TIME_LIMIT = 30 * 60 * 1000; // 30 хвилин в мілісекундах
+    const elHours = document.getElementById('hours');
+    const elMinutes = document.getElementById('minutes');
+    const elSeconds = document.getElementById('seconds');
+
+    function initTimer() {
+        // Отримуємо збережений час завершення з localStorage
+        let targetTime = localStorage.getItem('mobilityOfferEndTime');
+        const now = new Date().getTime();
+
+        // Якщо час не задано або він вже пройшов — скидаємо знову на 30 хвилин
+        if (!targetTime || now > parseInt(targetTime)) {
+            targetTime = now + TIME_LIMIT;
+            localStorage.setItem('mobilityOfferEndTime', targetTime);
+        }
+
+        function updateDisplay() {
+            const currentTime = new Date().getTime();
+            const distance = parseInt(targetTime) - currentTime;
+
+            // Якщо дійшло до нуля, скидаємо і зберігаємо знову
+            if (distance <= 0) {
+                targetTime = currentTime + TIME_LIMIT;
+                localStorage.setItem('mobilityOfferEndTime', targetTime);
+            }
+
+            // Розрахунок годин, хвилин та секунд
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Вивід на екран із форматуванням до двох цифр
+            elHours.innerText = hours.toString().padStart(2, '0');
+            elMinutes.innerText = minutes.toString().padStart(2, '0');
+            elSeconds.innerText = seconds.toString().padStart(2, '0');
+        }
+
+        // Оновлюємо відразу, а потім щосекунди
+        updateDisplay();
+        setInterval(updateDisplay, 1000);
+    }
+
+    initTimer();
+</script>
+</body>
+</html>

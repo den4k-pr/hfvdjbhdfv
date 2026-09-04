@@ -1,0 +1,102 @@
+
+
+.contacts{
+    padding: 0px 10px 20px 10px;
+        margin: 0 0 60vw 0;
+}
+
+
+.contacts-privacy{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 114%;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.contacts-title{
+    font-family: 'League Gothic';
+    font-size: 7vw;
+}
+
+.contacts__links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.contacts__links-link img{
+    width: 96px;
+    object-fit: contain;
+}
+
+.contact-text{
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 121%;
+    text-transform: uppercase;
+    color: #000;
+}
+
+@media (max-width: 440px) {
+    .contacts {
+        padding: 0 2.27vw 4.54vw 2.27vw;
+    }
+
+    .contacts-privacy {
+        font-size: 3.18vw;
+    }
+
+    .contacts__links {
+        padding: 6.81vw 0;
+    }
+
+    .contacts__links-link img {
+        width: 21.81vw;
+    }
+
+    .contact-text {
+        font-size: 2.72vw;
+    }
+}
+
+@media(min-width: 1028px){
+
+    .contacts{
+        position: relative;
+        max-width: 85vw;
+        width: 100%;
+        margin: 0 auto !important;
+    }
+    .contacts__links{
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .contacts-title{
+        font-size: 3vw;
+    }
+
+    .contact-text{
+        font-size: 1.3vw;
+        padding-top: 2vw;
+        padding-bottom: 4vw;
+    }
+
+    .contacts-privacy{
+        font-size: 1.3vw;
+    }
+
+    .contacts__links{
+        width: 40vw;
+    }
+
+    .contacts__links-link img{
+        width: 10vw;
+    }
+}

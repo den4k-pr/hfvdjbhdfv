@@ -1,0 +1,445 @@
+:root {
+    --pink: #FF4400;
+    --light-pink: #FF4400;
+    --dark-blue: #1d4e5f;
+    --lime: #d4ff00;
+    --text-dark: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p{
+    font-family: 'Inter', sans-serif !important;
+}
+
+body{
+    background: #000;
+    color: #fff;
+}
+
+@font-face {
+    font-family: 'League Gothic';
+    src: url('../fonts/LeagueGothic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.upsell-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    background: url(../images/fon.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+    background-position: top center;
+}
+
+.star{
+    width: 20px;
+    margin-bottom: -20px;
+}
+
+.stars{
+    width: 25px;
+    margin-top: -20px;
+}
+
+/* Header */
+.header {
+    padding: 20px 10px;
+}
+
+.header h1 {
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    font-family: 'League Gothic' !important;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.wait-badge {
+    color: var(--pink);
+    font-size: 45px;
+    padding-top: 30px;
+    font-weight: 500;
+    font-family: 'League Gothic';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.deal-text {
+    font-size: 16px;
+    padding: 0 40px;
+    margin-top: 5px;
+    line-height: 1.2;
+}
+
+/* Timer Bar */
+.timer-bar {
+    background-color: var(--light-pink);
+    font-family: 'Inter', sans-serif !important;
+    color: #000;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 8px;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.timer-bar-img{
+    width: 15px;
+}
+
+/* Main Card Section */
+.main-card {
+    position: relative;
+    height: 550px;
+    background: url('../images/fon-2.png') center/cover no-repeat; /* Потрібно вставити фото з жінкою */
+    background-position: top;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px 20px;
+}
+
+.main-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #333;
+    line-height: 1;
+}
+
+.main-title span {
+    color: var(--dark-blue);
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 15px 0;
+    max-width: 280px;
+    color: #444;
+}
+
+.price-tag {
+    background-color: var(--lime);
+    display: inline-block;
+    font-family: 'Inter', sans-serif !important;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.price-tag span{
+    font-weight: 700;
+}
+
+.benefits-list {
+    list-style: none;
+}
+
+.benefits-list li {
+    display: flex;
+    align-items: center;
+    font-family: 'Inter', sans-serif !important;
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 13px;
+    color: #333;
+}
+
+.check {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-image: url(../images/check.png);
+    background-repeat: no-repeat;
+    box-shadow: 0 0 9px 0 #dcff31;
+    background-position: center;
+    background-size: 50%;
+    background-color: #d4ff00;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    box-shadow: 0 -6px 38px 0 rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.75);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 24px 24px 0 0;
+    border-radius: 30px 30px 0 0;
+    margin-top: -20px;
+    position: relative;
+    top: -188px;
+}
+
+.urgency-text {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.urgency-text span {
+    color: #ff0004;
+}
+
+.add-btn {
+    background-image: url(../images/button.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    border: none;
+    display: block;
+    font-family: 'Inter', sans-serif !important;
+    padding: 18px;
+    font-size: 22px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-bottom: 20px;
+}
+
+.add-btn:active {
+    transform: scale(0.98);
+}
+
+.support-link {
+    font-size: 17px;
+    color: #a4a4a4;
+    text-decoration: underline;
+    font-family: 'Inter', sans-serif !important;
+    opacity: 0.8;
+}
+
+@media(max-width: 420px){
+    .urgency-text{
+        font-size: 4vw;
+    }
+
+    .main-card{
+        height: 120vw;
+    }
+
+    .footer{
+        top: -40vw;
+    }
+}
+
+
+
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* --- REVIEWS --- */
+.reviews-section {
+    background-color: #0b0605;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.review-card {
+    background-color: #ffffff;
+    border-radius: 40px;
+    padding: 30px;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.message-bubble {
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    padding: 15px 20px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ccc;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.message-content p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Swiper Pagination Customization */
+.swiper {
+    padding-bottom: 50px !important;
+}
+
+.swiper-pagination {
+    text-align: left !important;
+    bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #555 !important;
+    opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ff5c00 !important; /* Помаранчевий колір */
+}
+
+.timer-container {
+    position: absolute;
+    bottom: 90px;
+    left: 0px;
+    padding: 25px;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+}
+
+.timer-title {
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.timer-display {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.timer-block {
+    background-color: #120c0c;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #222;
+}
+
+.timer-block span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #ff3d00; /* Яскраво-помаранчевий */
+}
+
+/* Стиль для сірих нулів (як на скріншоті) */
+.timer-block.inactive span {
+    color: #555;
+}
+
+.separator {
+    color: #555;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* --- FOOTER --- */
+.footer-section {
+    background-color: #000000;
+    text-align: center;
+    padding: 0px 20px 20px;
+}
+
+.footer-title {
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-family: 'League Gothic' !important;
+}
+
+.footer-subtitle {
+    font-size: 18px;
+    color: #ccc;
+    margin-bottom: 30px;
+    font-family: 'Inter';
+}
+
+.instagram-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #ff5c00;
+    color: #ff5c00;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 0.3s;
+    font-family: 'Inter';
+}
+
+.instagram-btn:hover {
+    background-color: #ff5c00;
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+    font-weight: 600;
+    font-family: 'Inter';
+}
